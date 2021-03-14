@@ -8,7 +8,7 @@ using System.Text;
 namespace UnitTest
 {
 	[TestClass]
-	public class MethodsTest
+	public class MockMethodsTest
 	{
 		[TestMethod]
 		public void MockMethodWithSpecificArgument()
