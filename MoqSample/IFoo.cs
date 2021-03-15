@@ -1,4 +1,6 @@
-﻿namespace MoqSample
+﻿using System;
+
+namespace MoqSample
 {
 	// Raising a custom event which does not adhere to the EventHandler pattern
 	public delegate void MyEventHandler(int i, bool b);
@@ -8,6 +10,8 @@
 		Bar Bar { get; set; }
 		string Name { get; set; }
 		int Value { get; set; }
+
+
 		bool DoSomething(string value);
 		bool DoSomething(int number, string value);
 		string DoSomethingStringy(string value);
@@ -17,6 +21,7 @@
 		bool Add(int value);
 
 		event MyEventHandler MyEvent;
+		event EventHandler FooEvent;
 	}
 
 	public class Bar
