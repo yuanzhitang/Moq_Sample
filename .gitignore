@@ -1,2 +1,5 @@
 /MoqSample/bin
 /MoqSample/obj
+/.vscode
+/UnitTest/bin
+/UnitTest/obj
