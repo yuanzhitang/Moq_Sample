@@ -1,5 +1,8 @@
 ﻿namespace MoqSample
 {
+	// Raising a custom event which does not adhere to the EventHandler pattern
+	public delegate void MyEventHandler(int i, bool b);
+
 	public interface IFoo
 	{
 		Bar Bar { get; set; }
@@ -12,6 +15,8 @@
 		bool Submit(ref Bar bar);
 		int GetCount();
 		bool Add(int value);
+
+		event MyEventHandler MyEvent;
 	}
 
 	public class Bar
