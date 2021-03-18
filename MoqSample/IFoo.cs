@@ -3,7 +3,7 @@
 namespace MoqSample
 {
 	// Raising a custom event which does not adhere to the EventHandler pattern
-	public delegate void MyEventHandler(int i, bool b);
+	public delegate int MyEventHandler(int i, int b);
 
 	public interface IFoo
 	{
@@ -23,6 +23,52 @@ namespace MoqSample
 		event MyEventHandler MyEvent;
 		event EventHandler FooEvent;
 	}
+
+	public class Foo : IFoo
+	{
+		public Bar Bar { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+		public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+		public int Value { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+		public event MyEventHandler MyEvent;
+		public event EventHandler FooEvent;
+
+		public bool Add(int value)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool DoSomething(string value)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool DoSomething(int number, string value)
+		{
+			throw new NotImplementedException();
+		}
+
+		public string DoSomethingStringy(string value)
+		{
+			throw new NotImplementedException();
+		}
+
+		public int GetCount()
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool Submit(ref Bar bar)
+		{
+			throw new NotImplementedException();
+		}
+
+		public bool TryParse(string value, out string outputValue)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
 
 	public class Bar
 	{
